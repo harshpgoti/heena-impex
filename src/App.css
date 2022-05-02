@@ -1,38 +1,325 @@
-.App {
+body {
+  padding: 0px;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  font-size: 14px;
+  font-style: normal;
+  font-family: 'ApercuPro';
+  height: 100%;
+  position: relative;
+}
+
+/* down menu */
+header{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: -80px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: top 0.5s;
+  overflow: hidden;
+}
+header ul {
+  height: 100%;
+    margin: 0;
+    padding: 0;
+}
+header li {
+  list-style-type: none;
+  height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.header-logo{
+  height: 80px;
+}
+
+/* side menu */
+.menu-icon{
+  font-size:30px;
+  cursor:pointer;
+  position: absolute;
+  margin: 0px;
+  top: 3%;
+  left: 2%;
+}
+.menu-close{
+  font-size:30px;
+  cursor:pointer;
+  color: white;
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  font-size: 36px;
+  margin: 0px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #454054;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav img{
+  height: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* home page */
+.home-div{
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.home-section{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.section-heading {
+  font-family: ApercuPro-bold;
+  font-size: 40px;
+  color: white;
+  color: #0F1C35;
+  transition: 0.5s;
+}
+.section-heading-sub {
+  font-family: ApercuPro-Medium;
+  font-size: 16px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.section-heading:hover, .section-heading-sub:hover {
+  transition: 0.5s;
+  color: #E1B12C;
+  cursor:pointer;
+}
+.contant {
+  font-family: ApercuPro-Light;
+  font-size: 16px;
+  color: white;
+}
+.contant span{
+  color: #E1B12C;
+  font-weight: bolder;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-first-section{
+  background: linear-gradient(to bottom, #433e52 0%, rgba(49, 67, 82, 0.6) 100%);
+  display: flex;
+}
+.fs-logo{
+  margin: auto;
+  height: 500px;
+  width: auto;
+}
+
+
+.home-second-section{
+  background: linear-gradient(to bottom, rgba(49, 67, 82, 0.6) 0%, #433e52 100%);
+}
+.home-ss{
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.home-second-section .section-heading {
+  position: absolute;
+  margin: 0px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-second-section .contant {
+  position: absolute;
+  margin: 0px;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 2;
+  text-align: center;
+  width: 51%;
+}
+
+.home-third-section{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-third-section::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to bottom, rgb(68, 64, 84,0.5) 1%, #473f5a 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-third-section .section-heading {
+  position: absolute;
+  margin: 0px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-third-section .section-heading-sub{
+  position: absolute;
+  margin: 0px;
+  top: 37%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 2;
+  text-align: center;
+}
+.home-third-section .contant {
+  position: absolute;
+  margin: 0px;
+  top: 47%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 2;
+  text-align: center;
+  width: 51%;
+}
+
+.home-forth-section {
+  background: linear-gradient(to bottom, #473f5a 1%, rgb(68, 64, 84,0.5) 100%);
+}
+.home-forth-section .section-heading {
+  position: absolute;
+  margin: 0px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-forth-section .contant {
+  position: absolute;
+  margin: 0px;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 2;
+  text-align: center;
+  width: 51%;
+}
+.home-forth-section .home-fs {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+#footer {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to bottom, #433e52 0%, rgba(49, 67, 82, 0.6) 100%);
+  overflow: hidden;
+}
+.footer-bg{
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: 2s;
+}
+footer:hover .footer-bg {
+  transform: scale(1.1);
+}
+.footer-main{
+  display: flex;
+  height: 90%;
+}
+.footer-main div{
+  width: 33.33%;
+}
+.footer-logo,.footer-map{
+  display: flex;
+}
+.footer-logo a {
+  display: flex;
+  margin: auto;
+}
+.footer-logo a img {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+.footer-map iframe {
+  margin: auto;
+  box-shadow: 0px 0px 15px #e1b12c;
+}
+.copyright {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+}
+.copyright:hover {
+  color: #E1B12C;
+}
+
+.footer-link {
+  display: grid;
+  margin: auto;
+}
+.footer-link {
+  text-align: center;
+}
+.contact-details a {
+  display: block;
+  margin: 10px;
+}
+.footer-link div{
+  margin: auto;
+  width: 100%;
+}
+.footer-link p{
+  font-size: 21px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+.social-links a{
+  background-color: rgba(0,0,0,0.2);
+  padding: 10px;
+  margin: 3px;
+  display: inline-block;
+}
+.footer-link a{
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+  text-decoration-line: none;
+}
+.footer-link a:hover{
+  color: #E1B12C;
+}
+.social-links a svg{
+  font-size: 25px;
 }
